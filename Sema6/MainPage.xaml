@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sema6.MainPage">
+
+    <StackLayout>
+        <Label Text="consumir web  service get " FontSize="20" HorizontalTextAlignment="Center">
+        </Label>
+        <Label x:Name="texto" Text="">
+        </Label>
+        <Button Text="Consultar"
+                x:Name="btnGet"
+                Clicked="btnGet_Clicked">
+            
+        </Button>
+        <ListView x:Name="MyLisView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label x:Name="lblnombre" Text="{Binding nombre}">
+                                </Label>
+                                <Label x:Name="lblapellido" Text="{Binding apellido}">
+                                </Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        <Button x:Name="btnIngresar" Text="Ingresar datos " Clicked="btnIngresar_Clicked"/>
+        <Button x:Name="btnActualización" Text="Actualización de datos" Clicked="btnActualización_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
